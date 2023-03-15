@@ -1,0 +1,58 @@
+body{
+    background-color: #0b5bd3;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+#message-el{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+#start-btn{
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    color: #0b5bd3;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+#newcard-btn{
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    color: #0b5bd3;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+#player-el{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    
+}
+
