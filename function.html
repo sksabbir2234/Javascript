@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Function</h3>
+    <script>
+
+        // simple function
+
+      function myFunction() {
+        document.write("Hello World!");
+      }
+      myFunction();
+
+
+    // function with parameter 
+    
+    function FruitProcessor(apple, mango){
+        console.log(apple, mango);
+        const juice = `Juice with ${apple} apples and ${mango} mangos`;
+        return juice;
+    }
+    const appleJuice = FruitProcessor(5, 0);
+    document.write('\n ');
+    document.write(appleJuice);
+
+
+    //Arrow function
+    const YearsRetirement = BirthYear=>{
+        const age = 2039 - BirthYear;
+        const retirement = 65 - age;
+        return retirement;
+    }
+    const retirement = YearsRetirement(1999);
+    document.write(' ');
+    document.write(retirement);
+
+    // arrow function with multiple para mitter 
+    const YearsRetirement1 = (BirthYear, firstName)=>{
+        const age = 2039 - BirthYear;
+        const retirement = 65 - age;
+        return `${firstName} retires in ${retirement} years `;
+    }
+    const retirement1 = YearsRetirement1(1999, 'Rahul');
+    document.write(' ');
+    document.write(retirement1);
+
+
+    //function inside function
+
+    function cutFruitPieces(fruit){
+        return fruit * 4;
+    }
+    function FruitProcessor1(apple, mango){
+        const applePieces = cutFruitPieces(apple);
+        const mangoPieces = cutFruitPieces(mango);
+        const juice = `Juice with ${applePieces} apples and ${mangoPieces} mangos`;
+        return juice;
+    }
+    const appleJuice1 = FruitProcessor1(5, 4);
+    document.write('\n ');
+    document.write(appleJuice1);
+
+
+    </script>
+  </body>
+</html>

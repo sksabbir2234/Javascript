@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        Array in js
+    </h3>
+
+    <script>
+        //Basic Array
+
+        const friends = ['Rahul', 'Raj', 'Rohan'];
+        document.write(friends);
+        document.write('<br>');
+
+        //Another way to declare an array
+
+        const years = new Array(1999, 2000, 2001, 2002);
+        document.write(years);
+        document.write('<br>');
+
+        //Array with different data types
+
+        const Rahul = ['Rahul', 'Raj', 2020-1999, 'student', friends];
+        document.write(Rahul);
+        document.write('<br>');
+
+        //Array and in length
+
+        document.write(Rahul.length);
+        document.write('<br>');
+        
+        // various length
+
+        const years1 = new Array(1999, 2000, 2001, 2002);
+        document.write(years1.length);
+        document.write('<br>');
+
+        //Array WITH FUNCTION
+
+        const calcAge = function(birthYear){
+            return 2037 - birthYear;
+        }
+
+        const years2 = [1990, 1967, 2002, 2010, 2018];
+
+        const age1 = calcAge(years2[0]);
+        const age2 = calcAge(years2[1]);
+        const age3 = calcAge(years2[years2.length - 1]);
+        document.write(age1, age2, age3);
+        document.write('<br>');
+        
+        //output using array
+
+        const ages = [calcAge(years2[0]), calcAge(years2[1]), calcAge(years2[years2.length - 1])];
+        document.write(ages);
+        document.write('<br>');
+
+        //Array push
+        document.write('This is a push method');
+        const friends1 = ['Rahul', 'Raj', 'Rohan'];
+        const newLength = friends1.push('Jay');
+        document.write(friends1);
+        document.write('<br>');
+        
+        //Array unshift
+        document.write('This is unshift method');
+        const newLength1 = friends1.unshift('Jay');
+        document.write(friends1);
+        document.write('<br>');
+
+        //Array pop
+        document.write('This is a pop method ');
+        const popped = friends1.pop();
+        document.write(friends1);
+        document.write('<br>');
+
+        //Array shift
+        document.write('This is a shift method ');
+        const shifted = friends1.shift();
+        document.write(friends1);
+        document.write('<br>');
+
+        //Array indexof         
+        document.write('This is a index of method');
+        document.write(friends1.indexOf('Raj'));
+        document.write('<br>');
+
+        //Array includes
+        document.write('This is a array include method ');
+        document.write(friends1.includes('Raj'));
+        document.write('<br>');
+
+        //Array includes
+        document.write(friends1.includes('Raj', 2));
+        document.write('<br>');
+
+        //Array join 
+        document.write('This is a join method ');
+        document.write(friends1.join('-'));
+        document.write('<br>');
+
+
+        // Array-> forEach
+        document.write('This is a array foreach method ');
+        const numbers = [1, 2, 3, 4, 5];
+        numbers.forEach((num) => {
+            document.write(num);
+        });
+
+        document.write('<br>');
+
+        // Arraay map
+        document.write('This is a  map method');
+        const multipleNumbers = numbers.map((num)=> num*2);
+        document.write(multipleNumbers)
+
+        document.write('<br>');
+
+        // Array filter
+        document.write('This is a filter method ');
+        const evenNumbers = numbers.filter((num)=> num%2 === 0);
+        document.write(evenNumbers);
+
+        document.write('<br>');
+
+        // Array reduce
+        document.write('This is a reduce method ');
+        const sum = numbers.reduce((acc, cur)=> acc + cur);
+        document.write(sum);
+
+        document.write('<br>');
+
+        // Array find
+        document.write('This is a find method ');
+        const findNum = numbers.find((num)=> num > 2);
+        document.write(findNum);
+
+        document.write('<br>');
+
+
+        
+        
+
+
+
+    </script>
+</body>
+</html>
