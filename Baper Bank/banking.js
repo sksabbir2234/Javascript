@@ -1,28 +1,28 @@
 
-document.getElementById('btn-deposit').addEventListener('click', function(){
+document.getElementById('btn-deposit').addEventListener('click', function() {
     const depositField = document.getElementById('deposit-field');
-    const depositFieldValue = depositField.value;
-    const depositFieldFloat = parseFloat(depositFieldValue);
+    const depositFieldValue = parseFloat(depositField.value);
+
+    if (isNaN(depositFieldValue)) {
+        alert('Please enter a valid deposit amount.');
+        return; // Exit the function if the input is not a valid number.
+    }
 
     const depositTotal = document.getElementById('deposit-total');
-    const depositTotalValue = depositTotal.innerText;
-    const depositTotalFloat = parseFloat(depositTotalValue);
+    const depositTotalFloat = parseFloat(depositTotal.innerText);
 
-    const depositCurrent = depositFieldFloat + depositTotalFloat; 
+    const balanceTotal = document.getElementById('balance-total');
+    const balanceTotalFloat = parseFloat(balanceTotal.innerText);
 
-    depositTotal.innerText = depositCurrent; 
+    const depositCurrent = depositTotalFloat + depositFieldValue;
+    const balanceCurrent = balanceTotalFloat + depositFieldValue;
 
-    const balanceTotal = document.getElementById('balance-total')
-    const balanceText = balanceTotal.innerText;
-    const balanceTotalFloat = parseFloat(balanceText);
+    depositTotal.innerText = depositCurrent.toFixed(2); // Display with 2 decimal places.
+    balanceTotal.innerText = balanceCurrent.toFixed(2);
 
-    const balanceCurrent = balanceTotalFloat + depositFieldFloat;
+    depositField.value = ''; // Clear the input field.
+});
 
-    balanceTotal.innerText = balanceCurrent;
-
-    depositField.value = '';
-
-})
 
 
 
