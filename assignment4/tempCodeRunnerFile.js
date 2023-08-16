@@ -1,0 +1,1 @@
+console.log(sortMaker([1, 2, 3]));

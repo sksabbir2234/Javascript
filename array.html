@@ -1,153 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h3>
-        Array in js
-    </h3>
-
+  </head>
+  <body>
+    <h3>Array in js</h3>
     <script>
-        //Basic Array
+      // What is an Array in JavaScript?
+      // An array in JavaScript is a data structure used to store a collection of elements in a sequential manner.
+      // It is a special type of object that provides methods for managing and manipulating ordered lists of items.
+      // Arrays can contain elements of any data type, including numbers, strings, objects, and even other arrays.
 
-        const friends = ['Rahul', 'Raj', 'Rohan'];
-        document.write(friends);
-        document.write('<br>');
+      // Creating an Array:
+      // You can create an array using either the array literal syntax or the Array constructor.
 
-        //Another way to declare an array
+      // Using array literal:
+      const fruits = ["apple", "banana", "orange"];
 
-        const years = new Array(1999, 2000, 2001, 2002);
-        document.write(years);
-        document.write('<br>');
+      // Using Array constructor:
+      const numbers = new Array(1, 2, 3, 4, 5);
 
-        //Array with different data types
+      // Accessing Elements:
+      // Array elements are accessed using zero-based indices.
+      // To access an element, simply use the index enclosed in square brackets [].
 
-        const Rahul = ['Rahul', 'Raj', 2020-1999, 'student', friends];
-        document.write(Rahul);
-        document.write('<br>');
+      const colors = ["red", "green", "blue"];
+      console.log(colors[0]); // Output: 'red'
+      console.log(colors[2]); // Output: 'blue'
 
-        //Array and in length
+      // Modifying Elements:
+      // You can modify array elements by assigning new values to specific indices.
 
-        document.write(Rahul.length);
-        document.write('<br>');
-        
-        // various length
+      const languages = ["JavaScript", "Python", "Java"];
+      languages[1] = "TypeScript";
+      console.log(languages); // Output: ['JavaScript', 'TypeScript', 'Java']
 
-        const years1 = new Array(1999, 2000, 2001, 2002);
-        document.write(years1.length);
-        document.write('<br>');
+      // Array Length:
+      // The length property of an array returns the number of elements it contains.
 
-        //Array WITH FUNCTION
+      const numbers = [1, 2, 3, 4, 5];
+      console.log(numbers.length); // Output: 5
 
-        const calcAge = function(birthYear){
-            return 2037 - birthYear;
-        }
+      // Adding Elements:
+      // You can add elements to the end of an array using the push() method.
 
-        const years2 = [1990, 1967, 2002, 2010, 2018];
+      const animals = ["cat", "dog"];
+      animals.push("elephant");
+      console.log(animals); // Output: ['cat', 'dog', 'elephant']
 
-        const age1 = calcAge(years2[0]);
-        const age2 = calcAge(years2[1]);
-        const age3 = calcAge(years2[years2.length - 1]);
-        document.write(age1, age2, age3);
-        document.write('<br>');
-        
-        //output using array
+      // Removing Elements:
+      // To remove elements from an array, you can use methods like pop() (remove the last element) or splice() (remove elements at specific positions).
 
-        const ages = [calcAge(years2[0]), calcAge(years2[1]), calcAge(years2[years2.length - 1])];
-        document.write(ages);
-        document.write('<br>');
+      const numbers = [1, 2, 3, 4, 5];
+      numbers.pop(); // Removes the last element (5) from the array
+      console.log(numbers); // Output: [1, 2, 3, 4]
 
-        //Array push
-        document.write('This is a push method');
-        const friends1 = ['Rahul', 'Raj', 'Rohan'];
-        const newLength = friends1.push('Jay');
-        document.write(friends1);
-        document.write('<br>');
-        
-        //Array unshift
-        document.write('This is unshift method');
-        const newLength1 = friends1.unshift('Jay');
-        document.write(friends1);
-        document.write('<br>');
+      const fruits = ["apple", "banana", "orange", "grape"];
+      fruits.splice(1, 2); // Removes 2 elements starting from index 1 ('banana', 'orange')
+      console.log(fruits); // Output: ['apple', 'grape']
 
-        //Array pop
-        document.write('This is a pop method ');
-        const popped = friends1.pop();
-        document.write(friends1);
-        document.write('<br>');
+      // Iterating through an Array:
+      // You can use loops (e.g., for loop, forEach) to iterate through the elements of an array.
 
-        //Array shift
-        document.write('This is a shift method ');
-        const shifted = friends1.shift();
-        document.write(friends1);
-        document.write('<br>');
+      const numbers = [1, 2, 3, 4, 5];
 
-        //Array indexof         
-        document.write('This is a index of method');
-        document.write(friends1.indexOf('Raj'));
-        document.write('<br>');
+      // Using for loop:
+      for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[i]);
+      }
 
-        //Array includes
-        document.write('This is a array include method ');
-        document.write(friends1.includes('Raj'));
-        document.write('<br>');
+      // Using forEach method:
+      const colors = ["red", "green", "blue"];
+      colors.forEach((color) => {
+        console.log(color);
+      });
 
-        //Array includes
-        document.write(friends1.includes('Raj', 2));
-        document.write('<br>');
+      // Array Methods:
+      // Arrays in JavaScript come with a variety of built-in methods that make working with arrays more convenient and efficient.
+      // Some common array methods include push(), pop(), shift(), unshift(), slice(), splice(), concat(), indexOf(), includes(), map(), filter(), reduce(), etc.
 
-        //Array join 
-        document.write('This is a join method ');
-        document.write(friends1.join('-'));
-        document.write('<br>');
+      const numbers = [1, 2, 3, 4, 5];
 
+      // Using array methods
+      numbers.push(6); // Adds 6 to the end
+      numbers.pop(); // Removes the last element (5)
+      numbers.includes(3); // Checks if 3 is present in the array (returns true)
 
-        // Array-> forEach
-        document.write('This is a array foreach method ');
-        const numbers = [1, 2, 3, 4, 5];
-        numbers.forEach((num) => {
-            document.write(num);
-        });
-
-        document.write('<br>');
-
-        // Arraay map
-        document.write('This is a  map method');
-        const multipleNumbers = numbers.map((num)=> num*2);
-        document.write(multipleNumbers)
-
-        document.write('<br>');
-
-        // Array filter
-        document.write('This is a filter method ');
-        const evenNumbers = numbers.filter((num)=> num%2 === 0);
-        document.write(evenNumbers);
-
-        document.write('<br>');
-
-        // Array reduce
-        document.write('This is a reduce method ');
-        const sum = numbers.reduce((acc, cur)=> acc + cur);
-        document.write(sum);
-
-        document.write('<br>');
-
-        // Array find
-        document.write('This is a find method ');
-        const findNum = numbers.find((num)=> num > 2);
-        document.write(findNum);
-
-        document.write('<br>');
-
-
-        
-        
-
-
-
+      // Example of array map method
+      const squares = numbers.map((num) => num * num);
+      console.log(squares); // Output: [1, 4, 9, 16, 25]
     </script>
-</body>
+  </body>
 </html>

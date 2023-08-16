@@ -10,8 +10,67 @@
         object
     </h3>
 
-    <style>
+    <script>
+        //basic object
+        var person = {
+            name: 'John',
+            age: 30,
+            job: 'teacher'
+        }
+
+        //object with mutliple value
+
+        var person = {
+            name: 'John',
+            age: 30,
+            job: 'teacher',
+            family: ['Jane', 'Mark', 'Bob'],
+            calculateAge: function() {
+                return 2020 - this.age;
+            }
+        }
+
+        // dot and bracket notation 
+     
+        // dot notation
+        document.write(person.name);
+        // bracket notation 
+        document.write(person['name']);
+
+        //different between dont and bracket notation
+        var name = 'name';
+        document.write(person[name]);
+        //object method
+        document.write(person.calculateAge());
+
+        // add to object
+        person.lastname = 'Smith';
+        document.write(person.lastname);
+        //delete from object
+        delete person.job;
+        document.write(person.job);
+
+        //object constructor
+        var john = new Object();
+        john.name = 'John';
+        john.age = 30;
+        john.job = 'teacher';
+        john.calculateAge = function() {
+            return 2020 - this.age;
+        }
+
+        //object constructor with parameter
+        var Person = function(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+        }
+        var john = new Person('John', 30, 'teacher');
+        var jane = new Person('Jane', 28, 'designer');
+        var mark = new Person('Mark', 35, 'retired');
+
         
-    </style>
+     </script>
+    
 </body>
 </html>
