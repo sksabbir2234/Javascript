@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Geometry</title>
+  </head>
+  <body>
+    <section>
+      <h1 class="text-center mt-10 mb-5 text-5xl">Geometry Calculator</h1>
+
+      <div class="grid grid-cols-4 gap-10 mx-auto">
+        <!-- Input -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img
+              src="images/ellipse.png"
+              alt="ellipse"
+              id="ellipse"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Ellipse</h2>
+            <p>Area (A) = π ab</p>
+            <div>
+              <input
+                id="largeNumber"
+                type="text"
+                placeholder="Large in cm"
+                class="input input-bordered input-warning w-full max-w-xs mb-1"
+              />
+              <input
+                id="smallNumber"
+                type="text"
+                placeholder="Small in cm"
+                class="input input-bordered input-warning w-full max-w-xs"
+              />
+            </div>
+            <p id="result">Result: </p>
+            <div class="card-actions">
+              <button id="btn-ellipse" class="btn btn-primary">Calculate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img
+              src="images/parallelogram.png"
+              alt="parallelogram"
+              id="parallelogram"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Parallelogram</h2>
+            <p>Area (A) = b X h</p>
+            <div>
+              <input
+                id="base"
+                type="text"
+                placeholder="Base in cm"
+                class="input input-bordered input-warning w-full max-w-xs mb-1"
+              />
+              <input
+                id="height"
+                type="text"
+                placeholder="Height in cm"
+                class="input input-bordered input-warning w-full max-w-xs"
+              />
+            </div>
+            <p id="result-para">Result :</p>
+            <div class="card-actions">
+              <button id="btn-parallelogram" class="btn btn-primary">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img
+              src="images/rectangle.png"
+              alt="rectangle"
+              id="rectangle"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Rectangle</h2>
+            <p>Area (A) = w X l</p>
+            <div>
+              <input
+                id="width"
+                type="text"
+                placeholder="Width in cm"
+                class="input input-bordered input-warning w-full max-w-xs mb-1"
+              />
+              <input
+                id="length"
+                type="text"
+                placeholder="Length in cm"
+                class="input input-bordered input-warning w-full max-w-xs"
+              />
+            </div>
+            <p id="result-rectangle">Result :</p>
+            <div class="card-actions">
+              <button id="btn-rectangle" class="btn btn-primary">Calculate</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img
+              src="images/triangle.png"
+              alt="triangle"
+              id="triangle"
+              class="rounded-xl"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Triangle</h2>
+            <p>Area (A) = 0.5 X b X h</p>
+            <div>
+              <input
+                id="base-triangle"
+                type="text"
+                placeholder="Base in cm"
+                class="input input-bordered input-warning w-full max-w-xs mb-1"
+              />
+              <input
+                id="height-triangle"
+                type="text"
+                placeholder="Height in cm"
+                class="input input-bordered input-warning w-full max-w-xs"
+              />
+            </div>
+            <p id="result-triangle">Result :</p>
+            <div class="card-actions">
+              <button id="btn-triangle" class="btn btn-primary">Calculate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
