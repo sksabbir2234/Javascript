@@ -54,3 +54,20 @@ function discountPrice() {
   
   discountPriceContainer.innerText = '$' + discountedTotal.toFixed(2);
 }
+
+document.getElementById("btn-checkout").addEventListener("click", function() {
+  var selectedItemContainer = document.getElementById("selected-items");
+  var selectedItems = selectedItemContainer.querySelectorAll("li");
+
+  if (selectedItems.length === 0) {
+    alert("Add products to the cart before checking out!");
+  } else {
+    // Open the modal
+    document.getElementById("my_modal_6").checked = true;
+  }
+});
+
+// Close modal when "Close" button is clicked
+document.querySelector(".modal-action label").addEventListener("click", function() {
+  document.getElementById("my_modal_6").checked = false;
+});
